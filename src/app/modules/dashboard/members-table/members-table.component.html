@@ -1,0 +1,33 @@
+<div class="card mb-2 mt-3">
+  <div class="card-body table-responsive">
+    <div class="flex justify-between mb-3">
+      <div  class=" text-xl text-gray-800 font-medium">{{ title }}</div>
+      <div class="flex items-center uppercase">
+        <a href="javascript:;" class="mr-3 text-teal-500 font-medium">View all members</a>
+        <a class="flex items-center" mat-stroked-button href="javascript:;" target="javascript:;"><i class="material-icons mr-1">filter_alt</i> Filter</a>
+      </div>
+    </div>
+    <table class="table table-hover">
+      <thead class=" text-gray-500">
+        <th>Name</th>
+        <th>Store Name</th>
+        <th>Purchases</th>
+        <th>Purchase Amount</th>
+        <th>Action</th>
+      </thead>
+      <tbody class=" text-gray-800 font-medium text-lg">
+        <tr *ngFor="let item of data">
+          <td>{{ item.name }}</td>
+          <td>{{ item.storeName }}</td>
+          <td>{{ item.purcahses }}</td>
+          <td>{{ item.currency }} {{ item.purchaseAmount }}</td>
+          <td>
+            <a class="text-teal-500" mat-stroked-button href="javascript:;" target="javascript:;"
+              >View Details</a
+            >
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

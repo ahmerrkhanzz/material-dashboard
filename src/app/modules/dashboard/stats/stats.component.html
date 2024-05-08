@@ -1,0 +1,30 @@
+<div class="card mb-2 mt-0">
+    <div class="flex flex-col p-4">
+      <h4 class=" flex text-xl font-medium items-center">
+        <i class="material-icons mr-2">people</i>
+        {{ title }}
+      </h4>
+      <h2 class="text-2xl font-bold mt-3">{{ value }}</h2>
+      <div class="flex items-center space-x-2 mt-3">
+        <a
+          mat-stroked-button
+          *ngIf="!feedback"
+          href="javascript:;"
+          class="bg-red-200 border border-red-600 text-red-600"
+          target="_blank"
+          >{{ percentage }}</a
+        >
+        <a
+          mat-stroked-button
+          *ngIf="feedback"
+          href="javascript:;"
+          class="bg-green-200 border border-green-600 text-green-600"
+          target="_blank"
+          >{{ percentage }}</a
+        >
+        <span class="text-gray-500 text-base">{{
+          comparison
+        }}</span>
+      </div>
+    </div>
+  </div>

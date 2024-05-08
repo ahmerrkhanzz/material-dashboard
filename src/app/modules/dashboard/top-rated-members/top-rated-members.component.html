@@ -1,0 +1,21 @@
+<h4 class="font-bold text-lg px-3 mt-1">{{ title }}</h4>
+<mat-list>
+  <mat-list-item *ngFor="let item of data" class="my-2">
+    <div class="flex space-x-3 items-center">
+      <div
+        class="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center"
+      >
+        <i class="material-icons">person</i>
+      </div>
+      <div class="flex flex-col">
+        <span class="text-gray-800 font-medium">
+          {{ item.name }}
+        </span>
+        <span
+          class="text-{{ title === 'Store Overview' ? 'green' : 'gray' }}-500"
+          >{{ item.value }}</span
+        >
+      </div>
+    </div>
+  </mat-list-item>
+</mat-list>

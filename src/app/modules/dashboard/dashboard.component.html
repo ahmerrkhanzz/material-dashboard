@@ -1,0 +1,38 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-9">
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-sm-4" *ngFor="let item of stats">
+            <app-stats
+              [title]="item.title"
+              [value]="item.value"
+              [percentage]="item.percentage"
+              [feedback]="item.feedback"
+              [comparison]="item.comparison"
+            ></app-stats>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 col-md-12">
+            <app-members-table [title]="'Recently Added Members'" [data]="tableData"></app-members-table>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="bg-white p-3 rounded-md mb-4">
+          <app-top-rated-members
+            [data]="topRatedMembers"
+            [title]="'Top Rated Members'"
+          ></app-top-rated-members>
+        </div>
+        <div class="bg-white p-3 rounded-md">
+          <app-top-rated-members
+            [data]="storeOverview"
+            [title]="'Store Overview'"
+          ></app-top-rated-members>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
